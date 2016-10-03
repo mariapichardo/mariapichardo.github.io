@@ -6,7 +6,6 @@ body {
   font-family: 'PT Sans', sans-serif;
   font-size: 18px;
 }
-
 a {
   color: #000000;
   text-decoration: none;
@@ -20,65 +19,48 @@ hr {
 img {
   max-width: 100%;
 }
-
-aside {
-  background-color:#0A1B2A;
-  color: White;
-}
-
-aside a {
-    color: White;
-}
 aside div#user_meta {
   padding: 40px;
   text-align: center;
-  color: White;
-
 }
 aside div#user_meta h2 {
-    margin: 15px 0 5px 0;
-    font-size: 45px;
+  margin: 15px 0 5px 0;
 }
 aside div#user_meta p {
-  margin: 0 0 20px 0;
-  font-size: 14px;
-  font-style: italic;
+  margin: 0 0 15px 0;
+  font-size: .8rem;
 }
 aside div#user_meta ul {
-  margin: 0px 0 0 0;
+  margin: 40px 0 0 0;
   padding-left: 0;
-  font-size: 17px;
+  font-size: .9rem;
   list-style-type: none;
 }
 aside div#user_meta ul li {
   display: inline;
-  line-height: 2em;
+  line-height: 3em;
 }
 aside div#user_meta ul li a {
-  padding: 15px 0px;
-/*  border: 3px solid #eeeeee;
+  padding: 5px 15px 5px 15px;
+  border: 3px solid #eeeeee;
   border-radius: 15px;
   -moz-border-radius: 15px;
-  -webkit-border-radius: 15px; */
-  color: White;
+  -webkit-border-radius: 15px;
+  color: #999999;
 }
-
 main header {
   padding: 40px;
-  /* border-top: #eeeeee 1px solid;
-  border-bottom: #eeeeee 1px solid; */
+  border-top: #eeeeee 1px solid;
+  border-bottom: #eeeeee 1px solid;
 }
 main header p {
   font-weight: bold;
-  font-size: 10px;
+  font-size: .6rem;
   text-transform: uppercase;
 }
 main article {
   max-width: 640px;
   padding: 40px;
-}
-main article div.article_title {
-    font-size: 30px
 }
 main article div.article_text {
   line-height: 1.375em;
@@ -90,7 +72,7 @@ main article div.article_text code {
   margin: 2px;
   padding: 0;
   color: #000000;
-  font-size: 14px;
+  font-size: .8rem;
   font-family: 'PT Mono', monospace;
   background: #eeeeee;
 }
@@ -99,7 +81,7 @@ main article div.article_text pre {
   padding: 2px;
   color: #000000;
   border-left: 3px solid #0e94ec;
-  font-size: 14px;
+  font-size: .8rem;
   font-family: 'PT Mono', monospace;
   background: #eeeeee;
   line-height: 1.125em;
@@ -115,7 +97,7 @@ main article div.gist {
   line-height: .875em;
 }
 main article div.article_meta {
-  font-size: 12px;
+  font-size: .7rem;
   color: #999999;
 }
 main footer {
@@ -130,7 +112,7 @@ main footer a.button_accent {
   -webkit-border-radius: 20px;
   text-transform: uppercase;
   color: #0e94ec;
-  font-size: 18px;
+  font-size: 1rem;
 }
 main footer a.button_accent:hover {
   color: #ffffff;
@@ -144,11 +126,11 @@ main div#ending_message {
   border-top: #eeeeee 1px solid;
   padding: 0 40px 0 40px;
   color: #999999;
-  font-size: 10px;
+  font-size: .6rem;
 }
 @media screen and (min-width: 1024px) {
   aside {
-    width: 20%;
+    width: 25%;
     height: 100%;
     position: fixed;
     top: 0;
@@ -160,13 +142,13 @@ main div#ending_message {
   }
   aside div#user_meta {
     max-width: 192px;
-    text-align: left;
+    text-align: right;
   }
   aside div#user_meta ul li {
     display: block;
   }
   main {
-    width: 80%;
+    width: 75%;
     position: absolute;
     top: 0;
     left: 25%;
@@ -180,4 +162,3 @@ main div#ending_message {
     border-top: 0;
   }
 }
-
