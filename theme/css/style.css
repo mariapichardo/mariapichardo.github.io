@@ -136,6 +136,30 @@ main footer a.button_accent:hover {
   color: #ffffff;
   background-color: #0e94ec;
 }
+.post .share {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 76px;
+    font-size: 16px;
+    font-family: "AlteHaasGrotesk", "Source Sans Pro", "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 4px 8px 4px 8px;
+    color: #3b3b3b;
+    border: 2px solid #3b3b3b
+}
+
+.post .share:hover {
+    color: #C21700;
+    border-color: #C21700;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    transition: all .2s ease
+}
 main footer a.button_accent:active {
   color: #ffffff;
   background-color: #0e94ec;
