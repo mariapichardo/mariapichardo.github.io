@@ -57,31 +57,62 @@
     <h1><a href="./project-3-liquor-sales-linear-regression.html">Project 3: Liquor Sales + Linear Regression</a></h1>
   </div>
   <div class="article_text">
-    <h3>Overview</h3>
+    <p>Group Members: Michael Roman, Tim Ernst, and Maria Pichardo</p>
+<h3>Overview</h3>
 
-<p>This week we are working with a  dataset that contains transactions for all stores that have a class E liquor licensee from the state of Iowa. Based on this we will do a Market research for new store locations.</p>
+<p>This week we are working with a  dataset that contains transactions for all stores that have a class E liquor licensee from the state of Iowa. Based on this dataset we perform a market research for new store locations.</p>
 <h3>Problem Statement</h3>
 
 <p>A liquor store owner in Iowa is looking to expand to new locations and has hired us to investigate the market data for potential new locations. The business owner is interested in the details of the best model you can fit to the data so that his team can evaluate potential locations for a new storefront.</p>
-<p>The main goals for this market research are:</p>
-<p>Build models of total sales based on location, price per bottle, total bottles sold.</p>
-<p>Provide a table of the best performing stores by location type of your choice (city, county, or zip code) and the predictions of the model(s).</p>
-<p>Based on the models and the table of data, recommend some general locations to the business owner, taking into account model performance. </p>
-<p>Validate the model's performance and ability to predict future sales using cross-validation.</p>
-<h3>Dataset Description</h3>
-
+<p>The main goals for this market research are:
 <ul>
-<li>We will be using a reduced version of the dataset that consists of 10% of the whole. It has 270,955 rows and 18 Columns.</li>
-<li>Number of rows for year 2015   218,594</li>
-<li>Number of rows for year 2016    52,361</li>
-<li>The dataset contains the entire 2015 and the first 3 months of 2016</li>
-<li>Columns are: Date, Store Number, City, Zip Code, County Number, County, Category, Category Name, Vendor Number, Item Number, Item Description, Bottle Volume (ml), State Bottle Cost, State Bottle Retail, Bottles Sold,Sale (Dollars),Volume Sold (Liters), Volume Sold (Gallons)</li>
+<li>Build models of total sales based on location, price per bottle, total bottles sold.</li></p>
+<li>Provide a table of the best performing stores by location type (city, county, or zip code) and the predictions of the model(s).</li>
+
+<li>Based on the models and the table of data, recommend some general locations to the business owner, taking into account model performance.</li>
+
+<li>Validate the model's performance and ability to predict future sales using cross-validation.</li>
+
 </ul>
 
+<h3>Dataset Description</h3>
+
+<p>This dataset contains the spirits purchase information of Iowa Class “E” liquor licensees by product and date of purchase. 
+Class E liquor license, for grocery stores, liquor stores, convenience stores, etc., allows commercial establishments to sell liquor for off-premises consumption in original unopened containers.
+<ul>
+<li>We will be using a reduced version of the dataset that consists of 10% of the whole. It has 270,955 rows and 18 Columns.</li>
+<li>The number of rows for year 2015 is 218,594</li>
+<li>The number of rows for year 2016 is 52,361</li>
+<li>The dataset contains the 4 quarters of 2015 and the first quarter of 2016</li>
+<li>Columns are: 
+<ul><ul>
+<li>Date: Date of order</li>
+<li>Item Number: Item number for the individual liquor product ordered.</li>
+<li>Item Description: Description of the individual liquor product ordered.</li>
+<li>Store Number: Unique number assigned to the store who ordered the liquor.</li>
+<li>City: City where the store who ordered the liquor is located</li>
+<li>Zip Code: Zip code where the store who ordered the liquor is located</li>
+<li>County Number: Iowa county number for the county where store who ordered the liquor is located</li>
+<li>County: County where the store who ordered the liquor is located</li>
+<li>Category: Category code associated with the liquor ordered</li>
+<li>Category Name: Category of the liquor ordered.</li>
+<li>Vendor Number: The vendor number of the company for the brand of liquor ordered</li>
+<li>Item number for the individual liquor product ordered.</li>
+<li>Item Description: Description of the individual liquor product ordered.</li>
+<li>Bottle Volume (ml): Volume of each liquor bottle ordered in milliliters.</li>
+<li>State Bottle Cost : The amount that Alcoholic Beverages Division paid for each bottle of liquor ordered</li>
+<li>State Bottle Retail: The amount the store paid for each bottle of liquor ordered</li>
+<li>Bottles Sold: The number of bottles of liquor ordered by the store</li>
+<li>Sale (Dollars): Total cost of liquor order (number of bottles multiplied by the state bottle retail)</li>
+<li>Volume Sold (Liters): Total volume of liquor ordered in liters. (i.e. (Bottle Volume (ml) x Bottles Sold)/1,000)</li>
+<li>Volume Sold (Gallons): Total volume of liquor ordered in gallons. (i.e. (Bottle Volume (ml) x Bottles Sold)/3785.411784)</li>
+<li>Columns are: 
+</ul></ul>
+</ul></p>
 <h3>Risks and Assumptions</h3>
 
-<p>We are only working with the 10% version which might not accurately reflect the behavior of the population but it contains the 2015 and the first qurter of 2016.</p>
-<p>We assume the Sales Dollars reported is accurate. We did a cross check with the calculated column “Total Dollar Bottle State Retail” and verified it was accurate</p>
+<p>We are only working with the 10% version, which might not accurately reflect the behavior of the population. But it contains the complete year 2015 and the first quarter of 2016.</p>
+<p>We assume the Sales Dollars reported is accurate. We did a cross check with the calculated column “Total Dollar Bottle State Retail” and verified it was accurate.</p>
 <h3>Data Mining</h3>
 
 <p>The following new columns were created to facilitate analysis and reporting: Year, Month (segregated from Date), Total Dollar Bottle State Cost, Total Dollar Bottle State Retail, Gross Profit</p>
