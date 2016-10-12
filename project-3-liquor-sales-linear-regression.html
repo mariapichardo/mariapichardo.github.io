@@ -60,7 +60,7 @@
     <p>Group Members: <b>Michael Roman, Tim Ernst, and Maria Pichardo</b></p>
 <h3>Overview</h3>
 
-<p>This week we are working with a  dataset that contains transactions for all stores that have a class E liquor licensee from the state of Iowa. Based on this dataset we perform a market research for new store locations.</p>
+<p>This week we are working with a  dataset that contains transactions for all stores that have a class E liquor licensee from the state of Iowa. Based on this dataset we perform a market research for new store locations. We added additional demographic data that the liquor sales literature suggest may lead to increased liquor sales, including: proportion of the population that's male vs. female, employment data and the proportion of the population 21 years or older.</p>
 <h3>Problem Statement</h3>
 
 <p>A liquor store owner in Iowa is looking to expand to new locations and has hired us to investigate the market data for potential new locations. The business owner is interested in the details of the best model you can fit to the data so that his team can evaluate potential locations for a new storefront.</p>
@@ -115,12 +115,12 @@ Class E liquor license, for grocery stores, liquor stores, convenience stores, e
 <p>We assume the Sales Dollars reported is accurate. We did a cross check with the calculated column “Total Dollar Bottle State Retail” and verified it was accurate.</p>
 <h3>Data Mining</h3>
 
-<p>The following new columns were created to facilitate analysis and reporting: Year, Month (segregated from Date), Total Dollar Bottle State Cost, Total Dollar Bottle State Retail, Gross Profit</p>
+<p>The following new columns were created to facilitate analysis and reporting: Year, Month (segregated from Date), Total Dollar Bottle State Cost, Total Dollar Bottle State Retail, Total Tax</p>
 <p>The following Parsing have been done to the data:
 <ul>
 <li>Converted Date to date format</li>
 <li>Renamed the column. Eliminate blank spaces and parenthesis</li>
-<li>There were 1,077 null county numbers and 632 null category names</li>
+<li>There were 1,077 null county numbers and 632 null category names. We populated the null counties with the information found in the dataset and the category names as well</li>
 <li>Found erroneous zipcode “'712-2” all in records for the city of ‘DUNLAP’. Replaced with correct zipcode 51529</li>
 <li>Converted the following columns to numeric: County Number, Category, State Bottle Cost, State Bottle Retail, Sale (Dollars)</li>
 <li>There were no county found in the dataset for cities: 'TABOR', 'SEYMOUR', and  'RUNNELLS' , manually updated the records with the correct county found in the internet.</li>
