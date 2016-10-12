@@ -60,7 +60,8 @@
     <p>Group Members: <b>Michael Roman, Tim Ernst, and Maria Pichardo</b></p>
 <h3>Overview</h3>
 
-<p>This week we are working with a  dataset that contains transactions for all stores that have a class E liquor licensee from the state of Iowa. Based on this dataset we perform a market research for new store locations. We added additional demographic data that the liquor sales literature suggest may lead to increased liquor sales, including: proportion of the population that's male vs. female, employment data and the proportion of the population 21 years or older.</p>
+<p>This week we are working with a  dataset that contains transactions for all stores that have a class E liquor licensee from the state of Iowa. Based on this dataset we performed a market research for new store locations. </p>
+<p>We added additional demographic data that the liquor sales literature suggest may lead to increase liquor sales, including: proportion of the population that's male vs. female, employment data and the proportion of the population 21 years or older.</p>
 <h3>Problem Statement</h3>
 
 <p>A liquor store owner in Iowa is looking to expand to new locations and has hired us to investigate the market data for potential new locations. The business owner is interested in the details of the best model you can fit to the data so that his team can evaluate potential locations for a new storefront.</p>
@@ -112,7 +113,9 @@ Class E liquor license, for grocery stores, liquor stores, convenience stores, e
 <h3>Risks and Assumptions</h3>
 
 <p>We are only working with the 10% version, which might not accurately reflect the behavior of the population. But it contains the complete year 2015 and the first quarter of 2016.</p>
-<p>We assume the Sales Dollars reported is accurate. We did a cross check with the calculated column “Total Dollar Bottle State Retail” and verified it was accurate.</p>
+<p>The sales dollars are reported from the state point of view, this amount does not represent "Actual Sales"</p>
+<p>We are missing sales with the stora margin. (Wit the actual store retail price) as a result we are unable to calculate profit. Considered best performing locations by the "Sale (Dollars)".</p>
+<p>We assumed the Sales Dollars reported is accurate. (We did a cross check with the calculated column “Total Dollar Bottle State Retail” and verified it was accurate)</p>
 <h3>Data Mining</h3>
 
 <p>The following new columns were created to facilitate analysis and reporting: Year, Month (segregated from Date), Total Dollar Bottle State Cost, Total Dollar Bottle State Retail, Total Tax</p>
@@ -135,7 +138,7 @@ Class E liquor license, for grocery stores, liquor stores, convenience stores, e
 <li>The City with the most number of stores is “DES MOINES” the capital of IOWA with a total of 89 stores
 The County with the most stores is ‘Polk’ county’ with a total of 210 stores</li>
 <li>The two top zipcodes in terms of # of stores are 50320, 50314 both in Des Moines</li>
-<li>ZipCode 50061 has the higher average profit with only one store in that area</li>
+<li>ZipCode 50061 has the higher average dollar tax paid with only one store in that area</li>
 </ul>
 
 <h3>Model</h3>
