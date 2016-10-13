@@ -114,8 +114,9 @@ Class E liquor license, for grocery stores, liquor stores, convenience stores, e
 
 <p>We are only working with the 10% version, which might not accurately reflect the behavior of the population. But it contains the complete year 2015 and the first quarter of 2016.</p>
 <p>The sales dollars are reported from the state point of view, this amount does not represent "Actual Sales"</p>
-<p>We are missing sales with the stora margin. (Wit the actual store retail price) as a result we are unable to calculate profit. Considered best performing locations by the "Sale (Dollars)".</p>
-<p>We assumed the Sales Dollars reported is accurate. (We did a cross check with the calculated column “Total Dollar Bottle State Retail” and verified it was accurate)</p>
+<p>We are missing sales with the store margin. (With the actual store retail price) as a result we are unable to calculate profit. Considered "best performing locations" using the "Sale (Dollars)" criteria.</p>
+<p>We assume that stores buying lots of liquor are selling a lot too but we don't know at the individual store level whether this is true at all, given the data.</p>
+<p>We assumed the Sales Dollars amount reported is accurate. (We did a cross check with the calculated column “Total Dollar Bottle State Retail” and verified it was accurate)</p>
 <h3>Data Mining</h3>
 
 <p>The following new columns were created to facilitate analysis and reporting: Year, Month (segregated from Date), Total Dollar Bottle State Cost, Total Dollar Bottle State Retail, Total Tax</p>
@@ -166,7 +167,35 @@ We appended the missing demographic data to our existing Iowa government dataset
 <img src="./images/10topcountiesdescription.png" alt="Logo" title="DSI" /></p>
 <h3>Recomendation</h3>
 
+<p>Our analysis, which was conducted at the county level, shows that the 10 Iowa counties most with the highest sales, in order, are:
+Polk
+Linn
+Johnson
+Black Hawk
+Scott
+Pottawattamie
+Woodbury
+Dubuque
+Story
+Iowa County</p>
+<p>For an entrepreneur looking to set up shop or expand further into Iowa, these locales would be the soundest places to start. Given our model's fit with the data and the tremendously high r squared, it is very unlikely that there would be material variance in 'Sales (Dollars)' for the entrepreneur, and these 10 counties represent the top of the 'Sales (Dollars)' list.</p>
 <p><img src="./images/list_top_counties.jpg" alt="Logo" title="DSI" /></p>
+<h3>Sources</h3>
+
+<p><font color="1dcaff">
+1. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2936987/"></a>;accessed 10/12/2015</p>
+<ol>
+<li>
+<p><a href="http://www.arcr.niaaa.nih.gov/arcr/arcr381/article08.htm"></a>; accessed 10/12/2015 </p>
+</li>
+<li>
+<p><a href="http://www.usatoday.com/story/money/business/2015/07/02/24-7-wall-st-states-drinking-most-beer/29574619/"></a>; accessed 10/12/2015</p>
+</li>
+<li>
+<p><a href="http://helenair.com/news/state-and-regional/demographic-factors-also-influence-drinking-and-driving/article_fdd73b94-3a30-11df-a889-001cc4c03286.html"></a>; accessed 10/12/2015
+</font></p>
+</li>
+</ol>
   </div>
   <div class="article_meta">
     <p>Posted on: Thu 13 October 2016</p>
