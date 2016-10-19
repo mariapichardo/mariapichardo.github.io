@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="./theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="./theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Maria Pichardo">
+  <meta name="description" content="Posts and writings by Maria Pichardo">
+
+
+<meta name="keywords" content="">
+
+  <title>
+    Maria Pichardo's Blog
+&ndash; Project 4: Web Scraping and Logistic Regression  -  Find out what factors most directly impact salaries  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href=".">
+        <img src="./theme/images/logo.png" alt="logo">
+      </a>
+      <h2><a href=".">Maria Pichardo</a></h2>
+      <p>Aspiring Data Scentist - General Assembly DSI Student</p>
+      <ul>
+        <li><a href="./pages/about-me.html">About me</a></li>
+        <li><a href="https://twitter.com/Pichardo19Maria" target="_blank">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/maria-pichardo-9b678b25" target="_blank">Linkedin</a></li>
+        <li><a href="http://github.com/mariapichardo" target="_blank">Github</a></li>
+        <li><a href="mailto:maria_pichardo@yahoo.com" target="_blank">Email</a></li>
+        <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+        <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+        <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href=".">Index</a> &brvbar; <a href="./archives.html">Archives</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h1><a href="./project-4-web-scraping-and-logistic-regression-find-out-what-factors-most-directly-impact-salaries.html">Project 4: Web Scraping and Logistic Regression  -  Find out what factors most directly impact salaries</a></h1>
+  </div>
+  <div class="article_text">
+    <p>Date: 2016-10-19 09:00 AM
+Category: Projects</p>
+<p>Group Members: <b>Peida Cai, Betsy Zimmermann, and Maria Pichardo</b></p>
+<h3>Overview</h3>
+
+<p>This week we worked with web scraping and logistic regression. In this project, we will practice two major skills. Collecting data by scraping a website and then building a binary predictor with Logistic Regression.</p>
+<p>We are going to collect salary information on data science jobs in a variety of markets. Then using the location, title, and summary of the job, we will attempt to predict a corresponding salary for that job. </p>
+<h3>Problem Statement</h3>
+
+<p>A contracting firm that's rapidly expanding needs to leverage data to win more contracts and wants to be competitive in the hiring market. We need to take a look at what industry factors influence the pay scale for these professionals.</p>
+<p>Aggregators like Indeed.com, Career Builder regularly pool job postings from a variety of markets and industries. Our job is to understand what factors most directly impact data science salaries and effectively, accurately find appropriate data science related jobs in the different cities in US.</p>
+<h3>Project Goals</h3>
+
+<p>The main goals for this project are:
+<ul>
+<li>Collect data on data science salary trends from a job listings aggregator for the analysis.</li></p>
+<li>Find out what factors most directly impact salaries (title, location, department, etc.). In this case, we do not want to predict mean salary as would be done in a regression. We believe that salary is better represented in categories than continuously. We </li>
+
+<li>Create a classifying model that could predict, for data science job listings that omit salary information, whether the salary would be above or below the median listed salary ($115k) as per the dataset collected from CareerBuilder
+
+</ul>
+
+<h3>Dataset Description</h3>
+
+<a href="https://data.iowa.gov/Economy/Iowa-Liquor-Sales/m3tr-qhgy/data"> 
+<font color="1dcaff">This dataset</font></a> gathers the data we were able to scrapped from Carre Builder with salary information.
+<ul>
+<li>We will be using a reduced version of the dataset that consists of 10% of the whole. It has 270,955 rows and 18 Columns.</li>
+<li>The number of rows for year 2015 is 218,594</li>
+<li>The number of rows for year 2016 is 52,361</li>
+<li>The dataset contains the 4 quarters of 2015 and the first quarter of 2016</li>
+<li>Columns are: 
+<ul><ul>
+<li><b>JobTitle:</b> </li>
+<li><b>Company:</b> </li>
+<li><b>Location:</b> </li>
+<li><b>Summary:</b> </li>
+<li><b>Salary:</b> </li>
+<li><b>SalaryType:</b> </li>
+<li><b>City:</b> </li>
+<li><b>State:</b> </li>
+<li><b>Salary Lower:</b> </li>
+<li><b>Salary Higher:</b> </li>
+<li><b>Salary Average:</b> </li>
+</ul></ul>
+</ul>
+
+<h4>Methods</h4>
+We us webscraping techniques to collect the results from indeed.com  and careerbuilder.com. I personall worked scrapping Carrer builder and will present here the career builder data behavior. We searched for “data scientist” with salary over $20k, in the most popular cities for data scientists. The information was found here: This was the dataset used to train and test the classification models.
+
+Since predicting the actual salary is proven to be difficult due to not having accurate information about the job, the salary field was recoded as a binary: above $115k (“high salary”) or below (“low salary”). 
+
+A base model was used, using  title, state, summary anad city  to predict salary using logistic regression. The chart below shows how the distribution between high and low salary jobs varied across the states.
+
+Also below the top ten common words that shows up in the Title and summary of a job posting for a Data Scientist.
+
+<img src="./images/project4_Top20words.png" alt="Logo" title="Top 20 words" />
+
+<h3>Risks and Assumptions</h3>
+
+Only the 10% of the jobs posted in Indeed and Career builder have Salary Information.
+
+There are dupplication of job posting among job portals
+
+The salary found is given as a range and a lot of hourly, monthl and weekely salaries are posted. We converted them to yearly salaries to beable to do a real comparison.
+
+We assumed that the jobs posed were still active and that they represent the behavior of the JOb market for Data Scientists.
+
+
+<h3>Data Mining</h3>
+
+The following new columns were created to facilitate analysis and reporting: 
+
+<li><b>Salary Lower:</b> </li>
+<li><b>Salary Higher:</b> </li>
+<li><b>Salary Average:</b> </li>
+
+
+
+
+The following Parsing have been done to the data:
+
+
+
+<h3>Findings</h3>
+
+
+<img src="./images/project4_salary_by_state.png" alt="Logo" title="Salary by State" />
+<img src="./images/project4_salary_histogram.png" alt="Logo" title="Salary Histogram" />
+<img src="./images/project4_model.png" alt="Logo" title="Logistic Regression" />
+
+<h3>Model</h3>
+The predictors are:
+Our Target: predict high and low salaries  
+
+
+<img src="./images/project4_model.png" alt="Logo" title="Logistic Regression" />
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Fri 02 March 2012</p>
+    <p>Category: <a href="./category/misc.html">misc</a>
+    </p>
+  </div>
+
+
+<section>
+    <p id="post-share-links">
+        Share on:
+        <a href="https://sharetodiaspora.github.io/?title=Project%204%3A%20Web%20Scraping%20and%20Logistic%20Regression%20%20-%20%20Find%20out%20what%20factors%20most%20directly%20impact%20salaries&url=https%3A//mariapichardo.github.io/project-4-web-scraping-and-logistic-regression-find-out-what-factors-most-directly-impact-salaries.html" target="_blank" title="Share on Diaspora"><font color="1dcaff">Diaspora*</a>
+        ❄
+        <a href="http://twitter.com/home?status=Project%204%3A%20Web%20Scraping%20and%20Logistic%20Regression%20%20-%20%20Find%20out%20what%20factors%20most%20directly%20impact%20salaries%20https%3A//mariapichardo.github.io/project-4-web-scraping-and-logistic-regression-find-out-what-factors-most-directly-impact-salaries.html" target="_blank" title="Share on Twitter"><font color="1dcaff">Twitter</a>
+        ❄
+        <a href="http://www.facebook.com/sharer/sharer.php?u=https%3A//mariapichardo.github.io/project-4-web-scraping-and-logistic-regression-find-out-what-factors-most-directly-impact-salaries.html" target="_blank" title="Share on Facebook"><font color="1dcaff">Facebook</a>
+        ❄
+        <a href="https://plus.google.com/share?url=https%3A//mariapichardo.github.io/project-4-web-scraping-and-logistic-regression-find-out-what-factors-most-directly-impact-salaries.html" target="_blank" title="Share on Google Plus"><font color="1dcaff">Google+</a>
+        ❄
+        <a href="mailto:?subject=Project%204%3A%20Web%20Scraping%20and%20Logistic%20Regression%20%20-%20%20Find%20out%20what%20factors%20most%20directly%20impact%20salaries&amp;body=https%3A//mariapichardo.github.io/project-4-web-scraping-and-logistic-regression-find-out-what-factors-most-directly-impact-salaries.html" target="_blank" title="Share via Email"><font color="1dcaff">Email</a>
+    </p>
+</section>
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; 2016 Maria Pichardo. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>
