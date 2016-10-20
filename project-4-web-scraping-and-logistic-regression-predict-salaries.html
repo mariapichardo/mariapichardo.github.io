@@ -57,8 +57,7 @@
     <h1><a href="./project-4-web-scraping-and-logistic-regression-predict-salaries.html">Project 4: Web Scraping and Logistic Regression - Predict Salaries</a></h1>
   </div>
   <div class="article_text">
-    <p><img src="./images/workinprogress.jpg" alt="Logo" title="work in progress" /></p>
-<p>Group Members: <b>Peida Cai, Betsy Zimmermann, and Maria Pichardo</b></p>
+    <p>Group Members: <b>Peida Cai, Betsy Zimmermann, and Maria Pichardo</b></p>
 <h3>Overview</h3>
 
 <p>This week we worked with web scraping and logistic regression. In this project, we will practice two major skills. Collecting data by scraping a website and then building a binary predictor with Logistic Regression.</p>
@@ -131,7 +130,7 @@ The chart below shows how the distribution between high and low salary jobs vari
 Distribution of the average salary 
 <img src="./images/project4_salary_histogram.png" alt="Logo" title="Salary Histogram" />
 
-The top 20 most common words that shows up in the Title and summary of a job posting for a Data Scientist in the careerbuilder.com dataset.
+<p> The top 20 most common words that shows up in the Title and summary of a job posting for a Data Scientist in the careerbuilder.com dataset.</p>
 
 <img src="./images/project4_Top20words.png" alt="Logo" title="Top 20 words" />
 
@@ -156,12 +155,25 @@ We assumed that the jobs posed were still active and that they represent the beh
 <h3>Model</h3>
 The predictors are: Title, state, summary and city
 Our Target:         predict high and low salaries  
-ROC: .97
+ROC: 0.97157594381
 
 <img src="./images/project4_model.png" alt="Logo" title="Logistic Regression" />
 
-
 <h3>Conclusions</h3>
+
+<p> You can see in the coeficients below that having 'senior' in the title and the City of San Francisco as the position location has tremendous impact in determining if the postion will be considered a High Salary one.</p>
+
+<img src="./images/project04_coef.jpg" alt="Logo" title="Coeficients" />
+
+<p>Confusion Table</p>
+
+<img src="./images/p4confusion_table.jpg" alt="Logo" title="Coeficients" />
+
+
+<p>Classification Report</p>
+
+
+<img src="./images/classification_report.jpg" alt="Logo" title="classification_report" />
   </div>
   <div class="article_meta">
     <p>Posted on: Wed 19 October 2016</p>
