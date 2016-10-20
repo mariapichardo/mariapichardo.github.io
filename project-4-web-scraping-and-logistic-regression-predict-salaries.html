@@ -57,8 +57,7 @@
     <h1><a href="./project-4-web-scraping-and-logistic-regression-predict-salaries.html">Project 4: Web Scraping and Logistic Regression - Predict Salaries</a></h1>
   </div>
   <div class="article_text">
-    <p>Note: Post is work in progress will be done shortly...click the title to see more
-<img src="./images/workinprogress.jpg" alt="Logo" title="work in progress" /></p>
+    <p><img src="./images/workinprogress.jpg" alt="Logo" title="work in progress" /></p>
 <p>Group Members: <b>Peida Cai, Betsy Zimmermann, and Maria Pichardo</b></p>
 <h3>Overview</h3>
 
@@ -99,20 +98,45 @@
 </ul></ul>
 </ul>
 
-<h4>Methods</h4>
-We used webscraping techniques to collect the results from indeed.com  and careerbuilder.com. I personally worked scrapping  the careerbuilder site and will present here the careerbuilder.com data behavior. We searched for “data scientist” with salary over $20k, in the most popular cities for data scientists. The information was found here: This was the dataset used to train and test the classification models.
+
+<h3>Data Mining</h3>
+
+The following new columns were created to facilitate analysis and reporting: 
+<ul>
+<li><b>City</b> </li>
+<li><b>State</b> </li>
+<li><b>Salary Lower</b> </li>
+<li><b>Salary Higher</b> </li>
+<li><b>Salary Average</b> </li>
+<li><b>High Salary</b> </li>
+</ul>
+
+<h3>Methods</h3>
+
+We used webscraping techniques to collect the results from indeed.com  and careerbuilder.com. We searched for “data scientist” with salary over $20k,<a href="https://www.goodcall.com/data-center/best-places-data-scientistsin"> 
+<font color="1dcaff"> in the most popular cities for data scientists.</font></a> This results conform the dataset(s) used to train and test the classification models.
+
+I personally worked scrapping  the careerbuilder site and will present here the careerbuilder.com data behavior. 
 
 Since predicting the actual salary is proven to be difficult due to not having accurate information about the job, the salary field was recoded as a binary: above $115k (“high salary”) or below (“low salary”). 
 
-A base model was used, using  title, state, summary anad city  to predict salary using logistic regression. The chart below shows how the distribution between high and low salary jobs varied across the states.
+A logistic regression model was used, selecting title, state, summary and city as predictors and the high-salary binary column ws the defined target. 
 
-Also below the top 20 common words that shows up in the Title and summary of a job posting for a Data Scientist in the careerbuilder.com dataset.
+<h3>Findings</h3>
+
+The chart below shows how the distribution between high and low salary jobs varied across the states.
+
+<img src="./images/project4_salary_by_state.png" alt="Logo" title="Salary by State" />
+
+Distribution of the average salary 
+<img src="./images/project4_salary_histogram.png" alt="Logo" title="Salary Histogram" />
+
+the top 20 common words that shows up in the Title and summary of a job posting for a Data Scientist in the careerbuilder.com dataset.
 
 <img src="./images/project4_Top20words.png" alt="Logo" title="Top 20 words" />
 
-<img src="./images/screenshotdataset.jpg" alt="Logo" title="Data set Sample" />
 
-20 common words that shows up in the summary and Title of a job posting for a Data Scientist in the Indeed.com
+The 20 common words that shows up in the summary and Title of a job posting for a Data Scientist in the Indeed.com
 
 <img src="./images/20_words_ds_job_summaryIndeed.png" alt="Logo" title="Top 20 words" />
 
@@ -129,30 +153,8 @@ The salary found is given as a range and a lot of hourly, monthl and weekely sal
 We assumed that the jobs posed were still active and that they represent the behavior of the JOb market for Data Scientists.
 
 
-<h3>Data Mining</h3>
-
-The following new columns were created to facilitate analysis and reporting: 
-
-<li><b>Salary Lower:</b> </li>
-<li><b>Salary Higher:</b> </li>
-<li><b>Salary Average:</b> </li>
-
-
-
-
-The following Parsing have been done to the data:
-
-
-
-<h3>Findings</h3>
-
-
-<img src="./images/project4_salary_by_state.png" alt="Logo" title="Salary by State" />
-<img src="./images/project4_salary_histogram.png" alt="Logo" title="Salary Histogram" />
-
-
 <h3>Model</h3>
-The predictors are:
+The predictors are: Title, state, summary and city
 Our Target: predict high and low salaries  
 
 <img src="./images/project4_model.png" alt="Logo" title="Logistic Regression" />
