@@ -100,13 +100,13 @@
 </ul>
 
 <h4>Methods</h4>
-We us webscraping techniques to collect the results from indeed.com  and careerbuilder.com. I personall worked scrapping Carrer builder and will present here the career builder data behavior. We searched for “data scientist” with salary over $20k, in the most popular cities for data scientists. The information was found here: This was the dataset used to train and test the classification models.
+We us webscraping techniques to collect the results from indeed.com  and careerbuilder.com. I personall worked scrapping Carrer builder and will present here the careerbuilder.com data behavior. We searched for “data scientist” with salary over $20k, in the most popular cities for data scientists. The information was found here: This was the dataset used to train and test the classification models.
 
 Since predicting the actual salary is proven to be difficult due to not having accurate information about the job, the salary field was recoded as a binary: above $115k (“high salary”) or below (“low salary”). 
 
 A base model was used, using  title, state, summary anad city  to predict salary using logistic regression. The chart below shows how the distribution between high and low salary jobs varied across the states.
 
-Also below the top 20 common words that shows up in the Title and summary of a job posting for a Data Scientist in the CareerBuilder.com dataset.
+Also below the top 20 common words that shows up in the Title and summary of a job posting for a Data Scientist in the careerbuilder.com dataset.
 
 <img src="./images/project4_Top20words.png" alt="Logo" title="Top 20 words" />
 
@@ -120,7 +120,7 @@ Also below the top 20 common words that shows up in the Title and summary of a j
 
 <h3>Risks and Assumptions</h3>
 
-Only the 10% of the jobs posted in Indeed and Career builder have Salary Information.
+Only the 10% of the jobs posted in Indeed.com and careerbuilder.com have Salary Information.
 
 There are dupplication of job posting among job portals
 
