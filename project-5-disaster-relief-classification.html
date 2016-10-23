@@ -60,19 +60,17 @@
     <h3>Overview</h3>
 
 <p>This week we worked with remote databases, and more advanced topics for conducting logistic regression.</p>
-<p>We are going to collect salary information on data science jobs in a variety of markets. Then using the location, title, and summary of the job, we will attempt to predict a corresponding salary for that job. </p>
+<p>We are going to create and train a a logistic regression model for disaster analysis using AWS PostgreSQL instance via Python.</p>
+<p>In this project, we'll be using data on passengers from the 1912 Titanic disaster store in a remote PostgreSQL database.</p>
 <h3>Problem Statement</h3>
 
-<p>You're working as a data scientist with a research firm that specializes in emergency management. In advance of client work, you've been asked to create and train a logistic regression model that can show off the firm's capabilities in disaster analysis.
-Frequently after a disaster, researchers and firms will come in to give an independent review of an incident. While your firm doesn't have any current client data that it can share with you so that you may test and deploy your model, it does have data from the 1912 titanic disaster that it has stored in a remote database.
-In this project, we'll be using data on passengers from the Titanic disaster to show off your analytical capabilities. The data is stored in a remote database, so you'll need to set up a connection and query the database (using Python!). After, you'll construct a logistic regression model and test/validate its results so that it will be ready to deploy with a client.</p>
-<p>A contracting firm that is rapidly expanding needs to leverage data to win more contracts and wants to be competitive in the hiring market. We need to take a look at what industry factors influence the pay scale for these professionals.</p>
-<p>Aggregators like Indeed.com, CareerBuilder.com regularly pool job postings from a variety of markets and industries. Our job is to understand what factors most directly impact data science salaries and effectively, accurately find appropriate data science related jobs in the different cities in US.</p>
+<p>A research firm that specializes in emergency management needs to create and train a a logistic regression model that can show off the firm's capabilities in disaster analysis. </p>
+<p>The model will predict the probability of surival based on the best predictors we can find. </p>
 <h3>Project Goals</h3>
 
 <p>The main goals for this project are:
 <ul>
-<li>CCollect your data from an AWS PostgreSQL instance via Python + Jupyter Notebook.</li>
+<li>Collect your data from an AWS PostgreSQL instance via Python + Jupyter Notebook.</li>
 <li>Perform any necessary data wrangling before building the model </li>
 <li>Create a logistic regression model to figure out the likelihood of a passenger's survival </li>
 <li>Gridsearch optimal parameters for the logistic regression model </li>
@@ -86,17 +84,8 @@ In this project, we'll be using data on passengers from the Titanic disaster to 
 <font color="1dcaff">This dataset</font></a> gathers the data we were able to scrapped from careerbuilder.com with salary information.
 <ul>
 <ul><ul>
-<li><b>JobTitle:</b> The title of the position</li>
-<li><b>Company:</b> The company requesting the candidate, sometimes it can be a consulting company in between the canidates and the real company</li>
-<li><b>Location:</b> City and State when the position is required </li>
-<li><b>Summary:</b>  A brief description of the document</li>
-<li><b>Salary:</b> Usually a salary range. Most of them per year, but you can find per hour, per week, per month </li>
-<li><b>SalaryType:</b> New created column  'Y' Yearly, 'W' weekely, 'H' Hourly, 'M' monthly</li> 
-<li><b>City:</b> The City extracted from loacation</li>
-<li><b>State:</b> The State extracted from loacation </li>
-<li><b>Salary Lower:</b> Salary Lower Range extracted from Salary </li>
-<li><b>Salary Higher:</b> Salary Higher Range extracted from Salary </li>
-<li><b>Salary Average:</b> Salary average between Lower and Higher</li>
+<li><b></b> </li>
+&lt;
 </ul></ul>
 </ul></p>
 <h3>Data Mining</h3>
@@ -119,7 +108,6 @@ In this project, we'll be using data on passengers from the Titanic disaster to 
 <p> <b>Our Target:</b>   </p>
 
 <p><p> <b>ROC:</b> </p></p>
-<p><img src="./images/project4_model.png" alt="Logo" title="Logistic Regression" /></p>
 <h3>Results and Conclusions</h3>
 
 <p>Confusion Table</p>
