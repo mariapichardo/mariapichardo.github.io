@@ -123,12 +123,16 @@ SOURCES:</p>
 
 <h3>Data Mining</h3>
 
-<p>The following new columns were created to facilitate analysis and reporting: </p>
+<p>We replaced the null ages with the median, because 20% of the dataset has null ages.
+We removed the null records for Embarked, consider them not meaningful </p>
 <h3>Methods</h3>
 
+<p>We used a logistic model to predict survival or no survival</p>
 <h3>Findings</h3>
 
 <p> The Median Ages is 28 </p>
+
+<p> The oldest person was 80 </p>
 
 <p><img src="./images/age_dist.png" alt="Embarked Proportion" title="Findings" /></p>
 <p> The average fare was 34 pounds</p>
@@ -155,11 +159,11 @@ SOURCES:</p>
 </ul></p>
 <h3>Model</h3>
 
-<p> <b>The predictors are:</b> </p>
+<p> <b>The predictors are:  Sex, Class, Age, SibSp, and Parch</b> </p>
 
-<p> <b>Our Target:</b>   </p>
+<p> <b>Our Target: Predict "Survival" or "Not Survival"</b>      </p>
 
-<p><p> <b>ROC:</b> </p></p>
+<p><p> <b>ROC:0.85249383906568088</b> </p></p>
 <p><img src="./images/coefs_titanic.jpg" alt="Embarked Proportion" title="Findings" /></p>
 <p><img src="./images/ROC_logreg.png" alt="Embarked Proportion" title="Findings" />
 <img src="./images/ROC_comp_logreg_knn.png" alt="Embarked Proportion" title="Findings" /></p>
