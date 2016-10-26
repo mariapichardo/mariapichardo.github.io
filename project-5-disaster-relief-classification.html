@@ -125,9 +125,6 @@ SOURCES:</p>
 
 <p>We replaced the null ages with the median, because 20% of the dataset has null ages.
 We removed the null records for Embarked, consider them not meaningful </p>
-<h3>Methods</h3>
-
-<p>We used a logistic model to predict survival or no survival</p>
 <h3>Findings</h3>
 
 <p> The Median Ages is 28 </p>
@@ -159,23 +156,41 @@ We removed the null records for Embarked, consider them not meaningful </p>
 </ul></p>
 <h3>Model</h3>
 
-<p> <b>The predictors are:  Sex, Class, Age, SibSp, and Parch</b> </p>
+<p>We used logistic and KNN models for this prediction of "survival or "no survival" 
+We trained and tested on a hold-out sample (30% of the dataset). Each model used the following features from the data:</p>
+<p> <b>dummy variables for Sex, Class, SibSp, and Parch </b> </p>
 
-<p> <b>Our Target: Predict "Survival" or "Not Survival"</b>      </p>
+<p> <b>normalized Age and Fare </b> </p>
 
-<p><p> <b>ROC:0.85249383906568088</b> </p></p>
+<p> <b>The ROC:0.85249383906568088</b> </p>
+
+<h3>Results </h3>
+
 <p><img src="./images/coefs_titanic.jpg" alt="Embarked Proportion" title="Findings" /></p>
-<p><img src="./images/ROC_logreg.png" alt="Embarked Proportion" title="Findings" />
-<img src="./images/ROC_comp_logreg_knn.png" alt="Embarked Proportion" title="Findings" /></p>
-<h3>Results and Conclusions</h3>
+<h3>ROC curve For the Logistic Regression model </h3>
 
+<p><img src="./images/ROC_logreg.png" alt="Embarked Proportion" title="Findings" /></p>
+<h3>Comparision of the ROC curve for the logistic regression and Knn models </h3>
+
+<p><img src="./images/ROC_comp_logreg_knn.png" alt="Embarked Proportion" title="Findings" /></p>
 <p>Confusion Table</p>
 
 <p><img src="./images/confusion_logreg.jpg" alt="Embarked Proportion" title="Findings" /></p>
+<p>Confusion matrix tells us that the model correctly predicted 81 survivors and 165 non-survivors, 17 were predicted to survive actually died(Type 1 error or false positives), while 31 were predicted died and actually survived (type 2 error or false negative).</p>
 <p>Classification Report</p>
 
+<p>Logistic Regression Model</p>
+
 <p><img src="./images/classifi_logreg.jpg" alt="Embarked Proportion" title="Findings" /></p>
+<p>Recall is about 0.84. This is the sensitivity or true positive rate (TPR)
+The model was able to predict 83% of all survived passengers.
+Precision is about 0.84. This is a measure of TP / (TP + FP).
+F1 is the harmonic mean of precision and sensitivity, provides and aggregated view of both performance metrics.</p>
+
+<p>Knn Model</p>
+
 <p><img src="./images/classification_knn_model.jpg" alt="Embarked Proportion" title="Findings" /></p>
+<p>Both models performed fairly similarly, but it was a very good experience to use different classifying model in order to tune the model.</p>
   </div>
   <div class="article_meta">
     <p>Posted on: Wed 26 October 2016</p>
