@@ -97,12 +97,36 @@ We will produce a report detailing our findings including next steps recommendat
 
 <h3>Dataset Description</h3>
 
+<p>The Imdb data set has a total of 250 rows and 51 columns. <a href="https://github.com/mariapichardo/GA-DSI/blob/master/projects/projects-weekly/project-05/imdb.csv"> <font color="1dcaff">Imdb dataset after data mining</font> </a></p>
 <p><b><u>VARIABLE DESCRIPTIONS</u></b>
+We will describe here the most important feature columns only. The dataset in in the above link for more details.
 <ul>
-<li><b></b> </li>
+<li><b>NumberOscar</b> </li>
+<li><b>TopActorCount </b> </li>
+<li><b>TopDirectorsCount</b> </li>
+<li><b>InUSA</b> </li>
+<li><b>Runtime </b> </li>
+<li><b>genre_Crime </b> </li> 
+<li><b>genre_Drama </b> </li>
+<li><b>genre_Action</b> </li>
+<li><b>genre_Western</b> </li>
+</ul></p>
+<h3>Data Mining</h3>
+
+<p>Created the following columns:</p>
+
+<ul>
+<li>Number of oscars won based on the Awards Column</li>
+<li>Top 10 actors count per movie based on # of movies in the top 250</li>
+<li>Top 10 directors count per movie based on # of movies in the top 250</li>
+ <li>"In English" binary column to indicate that the movie in in English or partially in English</li>
+<li>"In USA"  binary column to indicate that the movie done in USA or partially in USA</li>
+
+<li>Converted "runtime" into int</li>
+<li>"Released" into date</li>
+<li>"Year" into INT</li>
 </ul>
-<b><u>SPECIAL NOTES</u></b>
-<h3>Data Mining</h3></p>
+
 <p><img src="./images/prp6_heatmap1.png" alt="heat map all" title="heat map all" /></p>
 <p><img src="./images/prp6_heatmap2.png" alt="genre heatmap" title="heat map most important genre" /></p>
 <h3>Findings</h3>
