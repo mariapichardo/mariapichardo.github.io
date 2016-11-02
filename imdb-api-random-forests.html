@@ -97,7 +97,7 @@ We will produce a report detailing our findings including next steps recommendat
 
 <p>The Imdb data set has a total of 250 rows and 51 columns. <a href="https://github.com/mariapichardo/GA-DSI/blob/master/projects/projects-weekly/project-06/code/imdb.csv"> <font color="1dcaff">Imdb dataset after data mining</font> </a></p>
 <p><b><u>VARIABLE DESCRIPTIONS</u></b>
-We will describe here the most important feature columns only. The dataset in in the above link for more details.
+We will describe here the most important features columns only. The dataset in in the above link for more details.
 <ul>
 <li><b>NumberOscar</b> </li>
 <li><b>TopActorCount </b> </li>
@@ -142,13 +142,19 @@ We will describe here the most important feature columns only. The dataset in in
 
 <h3>Model</h3>
 
-<p><img src="./images/prp6_rfr.png" alt="Rain Forest Model" title="Rain Forest Model" />
-<img src="./images/prp6_featureImportance.png" alt="Features of Importance" title="Features of Importance" /></p>
+<p><img src="./images/prp6_rfr.png" alt="Rain Forest Model" title="Rain Forest Model" /></p>
+<h4>Features of imporance in the Ramdom Forest Regressor used</h4>
+
+<p><img src="./images/prp6_featureImportance.png" alt="Features of Importance" title="Features of Importance" /></p>
 <h3>Results and Conclusion</h3>
 
-<p>After creating multiple models and compare them, there is not that much differece in terms of R2(s) and MSE(s) with the exception of the Decision Tree that has a R2 -0.93</p>
+<p>I used the Ramdom forest for the predictions. This model has the lowest MSE (mean squared error) of all the  models.</p>
 
-<p>I concentrated only in the Top 250, if we want the model to me smarter and optimla we MUST add to the datset the medium and low rated movies as well, and this can be considered a "next Step"</p>
+<p>After creating multiple models and compare them, there is not that much differece in terms of R2(s) and MSE(s) with the exception of the Decision Tree that has a R2 -0.93 and MSE of 0.03578</p>
+
+<p>There are so much data available in this API and in the web, we can work much more on evaluating if there are more features that can do a better prediction.  I also simplified or summarized some variables like actors, directors country, we can be more specific on this and get more "refined" features.</p>
+
+<p>I concentrated only in the Top 250, if we want the model to me smarter and optimal we MUST add the medium and low rated movies to the datset.</p>
 
 <p><img src="./images/model_comp_df.png" alt="Model Comparison R2" title="Model Comparison" /></p>
 <p><img src="./images/prp6_modelcomp1.png" alt="Model Comparison R2" title="Model Comparison" />
