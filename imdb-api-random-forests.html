@@ -108,6 +108,7 @@ We will describe here the most important features columns only. The dataset link
 <li><b>genre_Drama </b> binary value that indicate if 'Drama' is one of the GENRE of the movie (1 = Yes, 0 = No).</li>
 <li><b>genre_Action</b> binary value that indicate if 'Action' is one of the GENRE of the movie (1 = Yes, 0 = No).</li>
 <li><b>genre_Western</b> binary value that indicate if 'Western' is one of the GENRE of the movie (1 = Yes, 0 = No).</li>
+<li><b>imdbRating</b> Movie Rating - This is our Target.</li>
 </ul>
 
 <h3>Data Mining</h3>
@@ -126,8 +127,11 @@ We will describe here the most important features columns only. The dataset link
 <li>Converted "Year" into type INT and Standarize it.</li>
 </ul>
 
-<p><img src="./images/prp6_heatmap1.png" alt="heat map all" title="heat map all" /></p>
-<p><img src="./images/prp6_heatmap2.png" alt="genre heatmap" title="heat map most important genre" /></p>
+<p>Heat Map with the relationship of the numeric features and the imdbRating</p>
+
+<p><img src="./images/prp6_heatmap1.png" alt="heat map all" title="heat map all" />
+<p>Heat Map focused in the diferent GENRE(s) and the imdbRating</p>
+<img src="./images/prp6_heatmap2.png" alt="genre heatmap" title="heat map most important genre" /></p>
 <h3>Findings</h3>
 
 <p>I created multiple models for comparison. 
@@ -139,12 +143,10 @@ We will describe here the most important features columns only. The dataset link
 <p><img src="./images/prp6_rating_hist.png" alt="Rating Distribution" title="Rating Distribution" />
 <img src="./images/prp6_runtime_rating.png" alt="Runtime and rating" title="Runtime and rating" />
 <img src="./images/prp6_oscar_rating.png" alt="Oscars and Rating" title="Oscars and Rating" /></p>
-<h3>Risks and Assumptions</h3>
-
 <h3>Model</h3>
 
 <p><img src="./images/prp6_rfr.png" alt="Rain Forest Model" title="Rain Forest Model" /></p>
-<h4>Features of imporance in the Ramdom Forest Regressor used</h4>
+<h4>Features of imporance in the Random Forest Regressor used</h4>
 
 <p><img src="./images/prp6_featureImportance.png" alt="Features of Importance" title="Features of Importance" /></p>
 <h3>Results and Conclusion</h3>
