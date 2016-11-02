@@ -146,25 +146,31 @@ We will describe here the most important features columns only. The dataset link
 <p><img src="./images/prp6_oscar_rating.png" alt="Oscars and Rating" title="Oscars and Rating" /></p>
 <h3>Model</h3>
 
-<p><img src="./images/prp6_rfr.png" alt="Rain Forest Model" title="Rain Forest Model" /></p>
+<p>features = ['NumberOscar','TopActorCount', 'TopDirectorsCount', 'InUSA', 'Runtime', 'genre_Crime',  'genre_Drama', 'genre_Action','genre_Western']<\p>
+
+<p>Target = ['imdbRating']<\p>
+
+
+<img src="./images/prp6_rfr.png" alt="Rain Forest Model" title="Rain Forest Model" />
+
 <h4>Features of imporance in the Random Forest Regressor used</h4>
 
-<p><img src="./images/prp6_featureImportance.png" alt="Features of Importance" title="Features of Importance" /></p>
+<img src="./images/prp6_featureImportance.png" alt="Features of Importance" title="Features of Importance" />
+
+
 <h3>Results and Conclusion</h3>
 
 <p>I used the Ramdom forest for the predictions. This model has the lowest MSE (mean squared error) of all the  models.</p>
-
 <p>After creating multiple models and compare them, there is not that much differece in terms of R2(s) and MSE(s) with the exception of the Decision Tree that has a R2 -0.93 and MSE of 0.03578</p>
-
 <p>There are so much data available in this API and in the web, we can work much more on evaluating if there are more features that can do a better prediction.  I also simplified or summarized some variables like actors, directors country, we can be more specific on this and get more "refined" features.</p>
-
 <p>I concentrated only in the Top 250, if we want the model to me smarter and optimal we MUST add the medium and low rated movies to the datset.</p>
 
 <h4>Model comparison results below </h4>
 
-<p><img src="./images/model_comp_df.png" alt="Model Comparison R2" title="Model Comparison" /></p>
-<p><img src="./images/prp6_modelcomp1.png" alt="Model Comparison R2" title="Model Comparison" />
-<img src="./images/prp6_modelcomp2.png" alt="Model Comparison MSE" title="Model Comparison" /></p>
+<img src="./images/model_comp_df.png" alt="Model Comparison R2" title="Model Comparison" />
+
+<img src="./images/prp6_modelcomp1.png" alt="Model Comparison R2" title="Model Comparison" />
+<img src="./images/prp6_modelcomp2.png" alt="Model Comparison MSE" title="Model Comparison" />
   </div>
   <div class="article_meta">
     <p>Posted on: Wed 02 November 2016</p>
