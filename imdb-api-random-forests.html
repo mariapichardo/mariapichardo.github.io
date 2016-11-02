@@ -97,7 +97,7 @@ We will produce a report detailing our findings including next steps recommendat
 
 <h3>Dataset Description</h3>
 
-<p>The Imdb data set has a total of 250 rows and 51 columns. <a href="https://github.com/mariapichardo/GA-DSI/blob/master/projects/projects-weekly/project-05/imdb.csv"> <font color="1dcaff">Imdb dataset after data mining</font> </a></p>
+<p>The Imdb data set has a total of 250 rows and 51 columns. <a href="https://github.com/mariapichardo/GA-DSI/blob/master/projects/projects-weekly/project-06/imdb.csv"> <font color="1dcaff">Imdb dataset after data mining</font> </a></p>
 <p><b><u>VARIABLE DESCRIPTIONS</u></b>
 We will describe here the most important feature columns only. The dataset in in the above link for more details.
 <ul>
@@ -131,20 +131,26 @@ We will describe here the most important feature columns only. The dataset in in
 <p><img src="./images/prp6_heatmap2.png" alt="genre heatmap" title="heat map most important genre" /></p>
 <h3>Findings</h3>
 
+<p>I created multiple models for comparison. 
+<ul>
+<li>The Ramdom Forest Model is the one with the lower MSE.</li>
+<li>The most influenctial feature is the 'Runtime', followed by the Number of Oscars and the "Crime' Genre among others that you can see in the graphic and dataframe above</li>
+<li>Number of reviews seems to be a goos feature too, but it did not make sense to include that snce the reason was because the most popular movies got more reviews and this is only causing noise in there</li>
+</ul></p>
 <p><img src="./images/prp6_rating_hist.png" alt="Rating Distribution" title="Rating Distribution" />
 <img src="./images/prp6_runtime_rating.png" alt="Runtime and rating" title="Runtime and rating" />
 <img src="./images/prp6_oscar_rating.png" alt="Oscars and Rating" title="Oscars and Rating" /></p>
 <h3>Risks and Assumptions</h3>
-
-<p>Risks:</p>
-
-<p>Assumptions:</p>
 
 <h3>Model</h3>
 
 <p><img src="./images/prp6_rfr.png" alt="Rain Forest Model" title="Rain Forest Model" />
 <img src="./images/prp6_featureImportance.png" alt="Features of Importance" title="Features of Importance" /></p>
 <h3>Results and Conclusion</h3>
+
+<p>After creating multiple models and compare them, there is not that much differece in terms of R2(s) and MSE(s) with the exception of the Decision Tree that has a R2 -0.93</p>
+
+<p>I concentrated only in the Top 250, if we want the model to me smarter and optimla we MUST add to the datset the medium and low rated movies as well, and this can be considered a "next Step"</p>
 
 <p><img src="./images/prp6_modelcomp1.png" alt="Model Comparison R2" title="Model Comparison" />
 <img src="./images/prp6_modelcomp2.png" alt="Model Comparison MSE" title="Model Comparison" /></p>
