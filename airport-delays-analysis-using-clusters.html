@@ -62,74 +62,55 @@
 
 <p>In this project, we will use three different datasets related to airport operations. These include a dataset detailing the arrival and departure delays/diversions by airport, a dataset that provides metrics related to arrivals and departures for each airport, and a dataset that details names and characteristics for each airport code. </p>
 
-<h3>Problem Statement</h3>
+<h3>Executive Summary</h3>
 
-<p>The FAA is noticing significant delays with certain airports. Over the years some delay times have not improved or have worsened. They hired me as a consultant to analyze the operations of major airports around the country because they want to cut down on delays nationwide. My main task is to understand the distribution, characteristics, and components of individual airports operations that are leading to these delays.</p>
+<p>The purpose of this report is to investigate flight delays for FAA regulated airports in the US.There are significant delays with certain airports.Over the years these delays have not improved or have worsened. The data provided include a dataset detailing the arrival and departure delays/diversions by airport, a dataset that provides metrics related to arrivals and departures for each airport , and a dataset that details names and characteristics for each airport code.</p>
 
-<h3>Project Goals</h3>
+<p>I used Principal Component Analysis and clustering  to divide the airport/year pairs into two groups by an aggregated delay measure. 91% of the pairs fell into the first group with better delay metrics, and approximately 9% fell into the second group, which are assumed to have a  worse delay metrics.</p>
 
-<p>The main goals for this project are helping the FAA with the following:</p>
-
-<ul>
-<li>Organize and store the data </li>
-<li>Mine and refine the data to uncover its basic attributes and characteristics.</li>
-<li>Use PCA to uncover the core components of operations related to delays.</li>
-
-</ul>
-
-<h3>Dataset Background</h3>
-
-<p> <a href="https://en.wikipedia.org/wiki/IMDb"><font color="1dcaff">here</font> </a></p>
-
-<h3>Dataset Description</h3>
-
-<p>The Imdb data set has a total of  rows and  columns. <a href="https://github.com/mariapichardo/GA-DSI/blob/master/projects/projects-weekly/project-06/code/imdb.csv"> <font color="1dcaff">dataset after data mining</font> </a></p>
-<p><b><u>VARIABLE DESCRIPTIONS</u></b>
-We will describe here the most important features columns only. The dataset link above has all the columns and details.</p>
-<ul>
-<li><b></b></li>
-
-</ul>
+<p>We have data for 74 airports, five of them fell into the worse group for all the years. These airports are:  Chicago O’Hare Int’l Airport, Atlanta Hartsfield, Dallas/Fort Worth Intl, La Guardia, and Newark Liberty Intl. The FAA should focus on improving the performance on these ones first. In the other hand we have the following airports topping the list with the higher percentage of "on time" departures: Westchester county, Newark liberty intl,  John f kennedy intl, and Philadelphia intl. The FAA should take a closer look on the factors that lead to these higher percentages and replicate some of that for the worse group.</p>
 
 <h3>Risks and Assumptions of our data</h3>
 
-<p>We only have 799 records in total. Only 74 airports are included in the dataset. We do not have other factors for delays like the ones related to weather which can be quite common or mechanical problems with the airplanes, strikes...etc. Due to this our analysis will be based on the delay and diversion information present in the data set.</p>
+<p>We only have 799 records in total. Only 74 airports are included in the dataset. We do not have other factors for delays like the ones related to weather which can be quite common, or mechanical problems with the airplanes...etc. Due to this our analysis will be based on the delay and diversion information present in the data set.</p>
 
-<p>The following airports do not have information for all the years</p>
+<p>The following airports do not have information for all the years OXR-Oxnard, PSP-Palm Springs Intl, RFD- Chicago/Rockford Intl, and SMF-Sacramento Intl</p>
 
-<ul>
-<li>OXR-OXNARD                  7 years</li>
-<li>PSP-PALM SPRINGS INTL       8 years</li>
-<li>RFD-CHICAGO/ROCKFORD INTL   6 years</li>
-<li>SMF-SACRAMENTO INTL         8 years</li>
-</ul>
+<h3>Background</h3>
 
-<p>We assumed that the data is accurate and is related like we can see in the graphhics below.</p>
+<p>The FAA wants to cut down on delays nationwide, and wants to investigate the locations with the worst delays. They have provide datasets that have  delay information for a 10 year range between 2004 and 2014.</p>
 
-<h3>Data Mining</h3>
-
-<p>Created the following columns:</p>
+<p>These 5 USA airports are in the list of the 10 world's busiest airports by aircraft movements:</p>
 
 <ul>
-<li></li>
+<li>Hartsfield-Jackson Atlanta International Airport</li>
+<li>Chicago O'Hare International Airport</li>
+<li>Dallas/Fort Worth International Airport</li>
+<li>Los Angeles International Airport</li>
+<li>Denver International Airport</li>
 </ul>
 
-<h3>Findings</h3>
+<h4>Key statistics table.</h4>
 
-<p><img src="./images/prp5_depcan_arrcan.png" alt="genre heatmap" title="Departure cancellations and arrival cancellations" />
-<img src="./images/prp7_depdiv_arrdiv.png" alt="genre heatmap" title="Departure diversions and arrival diversions" /></p>
-<ul>
-<li></li>
-</ul>
+<p><img src="./images/proj07_stat_description.png" alt="genre heatmap" title="Departure cancellations and arrival cancellations" /></p>
+<p>We can see below that departure cancellations is highly correlated to arrival cancellations as well as departure diversions to arrival diversions</p>
+
+<p><img src="./images/prp5_depcan_arrcan.png" alt="genre heatmap" title="Departure cancellations and arrival cancellations" /></p>
+<p><img src="./images/prp7_depdiv_arrdiv.png" alt="genre heatmap" title="Departure diversions and arrival diversions" /></p>
+<p>This graphics below show the average od departure cancellation and departure diversion per year </p>
+
+<p><img src="./images/proj07_dep_can_per_tear.png" alt="genre heatmap" title="Departure diversions and arrival diversions" /></p>
+<p><img src="./images/proj07_dep_div_per_tear.png" alt="genre heatmap" title="Departure diversions and arrival diversions" /></p>
+<h4>Histograms</h4>
+
+<h3>Methods</h3>
 
 <h4>Histograms</h4>
 
 <h3>PCA</h3>
 
 <p><img src="./images/ClusterinPCAspace.gif" alt="PCA" title="Departure diversions and arrival diversions" /></p>
-<h3>Results and Conclusion</h3>
-
-<h4>Model comparison results below </h4>
+<h3>Results & Recommendations</h3>
   </div>
   <div class="article_meta">
     <p>Posted on: Wed 09 November 2016</p>
