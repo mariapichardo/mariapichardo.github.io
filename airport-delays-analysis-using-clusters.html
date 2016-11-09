@@ -106,10 +106,17 @@
 <p>The dataset is somehow normal but skewed to the right</p>
 
 <p><img src="./images/proj07_histograms.png" alt="genre heatmap" title="Departure diversions and arrival diversions" /></p>
+<p>proj07_siluette_scores</p>
 <h3>Methods</h3>
 
-<p>To analyze the airport delays I used Principal Component Analysis to reduce the delay features.  We can see in the PCA analysis that 85% of the variation in the original data could be captured by three principal components.</p>
+<p>To analyze the airport delays I used Principal Component Analysis to reduce the delay features. They are 14 features in total.</p>
 
+<p><a href="./images/feature_corr2.pdf"> Click here to see Feature correlation here</a></p>
+<p>We can see in the PCA analysis that 85% of the variation in the original data could be captured by three principal components.</p>
+
+<p><img src="./images/proj07_pcand_varianceratio.png" alt="pc(s) and Variance Ratio" title="Departure diversions and arrival diversions" /></p>
+<p>We also implemeted k-means clustering and plotted the siluetes scores to determine the optimal K or number of clutters. We can see below the 2 clusters give us the higher siluette score.</p>
+<p><img src="./images/proj07_siluette_scores.png" alt="siluette scores" title="Departure diversions and arrival diversions" /></p>
 <p>I also used K Means and Hierarchical clustering algorithms and determined that there are two clusters that you can see plotted in the PCA space in the dynamic graphic below:</p>
 
 <p><img src="./images/ClusterinPCAspace.gif" alt="PCA" title="Departure diversions and arrival diversions" /></p>
