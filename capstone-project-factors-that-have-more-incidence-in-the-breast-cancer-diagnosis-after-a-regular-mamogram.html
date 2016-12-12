@@ -72,6 +72,8 @@
 
 <p>The dataset used in the present project includes 2,392,998 screening mammograms (called the "index mammogram") from women included in the Breast Cancer Surveillance Consortium (BCSC) and results were published by Barlow et al. in the September 2006 issue of the Journal of the National Cancer Institute. The women in this dataset did not have a previous diagnosis of breast cancer and did not have any breast imaging in the nine months preceding the index screening mammogram. However, all women had undergone previous breast mammography in the prior five years (though not in the last nine months). Cancer registry and pathology data were linked to the mammography data and incident breast cancer (invasive or ductal carcinoma in situ) within one year following the index screening mammogram was assessed. There is one observation per woman, as opposed to multiple observations. All population and all other characteristics remain the same.</p>
 
+<p>This dataser has 9 years of data from 2000 to 2009</p>
+
 <h3>Data Dictionary</h3>
 
 <table class="data-table data-left">
@@ -279,25 +281,26 @@
 <h4>This last bubble chart is a visual representation of the relationship between race and the Brads classification</h4>
 <h3>Risks and Assumptions</h3>
 
-<p>The risk of modeling is always to be able to obtain accurate relative results from predicting based on factors, such as demographics, reproductive history,  medications, genetic factors (e.g., family history and susceptibility genes), and clinical and biologic markers (e.g., blood pressure, cholesterol, enzyme levels, and histologic markers). How these factors act jointly on risk also is important. These relative risk and attributable risk estimates, as well as missing or biased data has to be taken into account when reviewing the results of the present study</p>
+<p>The risk of modeling is always to be able to obtain accurate relative results from predicting based on factors, such as demographics, reproductive history,  medications, genetic factors (e.g., family history and susceptibility genes), and clinical and biologic markers (e.g., bmi - Body mass index). How these factors act jointly on risk also is important. These relative risk and attributable risk estimates, as well as missing or biased data has to be taken into account when reviewing the results of the present study</p>
 
-<p> The Statistical techniques used to calculate risk include empirical analysis and  logistic regression as well as other models that were compared based on their scores </p>
+<p> The Statistical techniques used to calculate risk include empirical analysis thru EDA and logistic regression as well as other classifiers that were compared based on their metric scores</p>
 
 <h3>Model</h3>
 
-<p>I used logistic model for feature evaluation and prediction of risk of cancer after a mamogram.</p>
+<p>I compared the classifiers below. It may seem like a lot, but the purpose was to select the best classifier based on mse and std.</p>
 
-<p>I trained and tested on a hold-out sample (30% of the dataset). </p>
+<p><img src="./images/model_comparison.png" alt="Logo" title="work in progress "/></p>
+<p>I trained and tested on a hold-out sample (20% of the dataset). </p>
 
 <p>Each model used the following features from the data: </p>
 
-<p><img src="./images/capstone_heatmap.png" alt="Logo" title="work in progress "/></p>
+<p><img src="./images/capstone_heatmap.png" alt="Logo" title="heatmap "/></p>
 <p>Evaluation data correlation</p>
 
-<p><img src="./images/captone_lr_model_roc.png" alt="Logo" title="work in progress "/></p>
+<p><img src="./images/captone_lr_model_roc.png" alt="Logo" title="LR ROC CURVE "/></p>
 <p>Model ROC curve and score</p>
 
-<p><img src="./images/precision_table_lr.png" alt="Logo" title="work in progress "/></p>
+<p><img src="./images/precision_table_lr.png" alt="Logo" title="Precision tables "/></p>
 <p> Confusion and precision tables </p>
 
 <p> Model Comparison</p>
