@@ -294,6 +294,30 @@
 
 <p>Each model used the following features from the data: </p>
 
+<p>Features:</p>
+
+<ul>
+
+<li>age_menarche - Age (years) at menarche</li>
+<li>age_group_5_years - Age (years) in 5 year groups</li>
+<li>race_eth - Race/ethnicity</li>
+<li>first_degree_hx - History of breast cancer in a first degree relative</li>
+<li>breast_cancer_history - Prior breast cancer diagnosis</li>
+<li>age_first_birth - Age (years) at first birth</li>
+<li>current_hrt - Use of hormone replacement therapy</li>
+<li>menopaus - Menopausal status</li>
+<li>bmi_group - Body mass index</li>
+
+</ul>
+
+<p>Target:</p>
+
+<p><p>Results based on BI-RADS breast density: </p></p>
+<ul>
+<li>0 - Negative  - Low risk </li>
+<li>1 - Positive  - High Risk</li>
+</ul>
+
 <p><img src="./images/capstone_heatmap.png" alt="Logo" title="heatmap "/></p>
 <p>Evaluation data correlation</p>
 
@@ -312,7 +336,7 @@
 <p><img src="./images/Coeficients_lr.png" alt="Logo" title="work in progress "/></p>
 <h3>Results and Conclusion</h3>
 
-<p>I have developed a prognostication model for early breast cancer based The Breast Cancer Surveillance Consortiumon index mammogram dataset that predicts breast cancer probability after a mamogram is done. The performance and score have been compare with ither similar classifiers </p>
+<p>I have developed a prognostication model for early breast cancer based The Breast Cancer Surveillance Consortiumon (BCSC) index mammogram dataset. The model predicts breast cancer probability after a mamogram is done. The probability is based on BI-RADS breast density which is part of the dataset. The performance and score have been compare among several classifiers. The best performer was GridsearchCV  Bagging Logistic Regression. I picked the Logistic refression because of its simplicity</p>
 
 <p>Being able to predict breast  cancer outcomes more accurately would help physicians make informed decisions regarding the potential necessity of research and treatment in women patients </p>
 
@@ -320,8 +344,12 @@
 
 <p>The model needs to be better calibrated  with more data, and also validated with and evaluated by professionals in the area </p>
 
+<p>It would be benefitial to research the BCSC dataset bank and more features to improve score  </p>
+
+<h3>Additional Links</h3>
+
 <p><a href="https://docs.google.com/presentation/d/19jJ3cA-yrd4_Mm-yO0AL9Uz74FbkJZmwq9i4TR2UrxY/edit#slide=id.p"> 
-<font color="1dcaff"> Google Slide Presentation Factors that have more incidence in the breast cancer diagnosis after a regular mamogram</font> </a></p>
+<font color="1dcaff"> Link to the Google Slide Presentation Factors that have more incidence in the breast cancer diagnosis after a regular mamogram</font> </a></p>
   </div>
   <div class="article_meta">
     <p>Posted on: Sun 11 December 2016</p>
