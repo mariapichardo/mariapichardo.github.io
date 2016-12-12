@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ## for client-side less
+  <link rel="stylesheet/less" type="text/css" href="./theme/css/style.less">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+  -->
+  <link rel="stylesheet" type="text/css" href="./theme/css/style.css">
+  <link rel="stylesheet" type="text/css" href="./theme/css/pygments.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Maria Pichardo">
+  <meta name="description" content="Posts and writings by Maria Pichardo">
+
+
+<meta name="keywords" content="">
+
+  <title>
+    Maria Pichardo's Blog
+&ndash; CAPSTONE PROJECT : Factors that have more incidence in the breast cancer diagnosis after a regular mammogram.  </title>
+
+</head>
+
+<body>
+  <aside>
+    <div id="user_meta">
+      <a href=".">
+        <img src="./theme/images/logo.png" alt="logo">
+      </a>
+      <h2><a href=".">Maria Pichardo</a></h2>
+      <p>Aspiring Data Scentist - General Assembly DSI Student</p>
+      <ul>
+        <li><a href="./pages/about-me.html">About me</a></li>
+        <li><a href="https://twitter.com/Pichardo19Maria" target="_blank">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/maria-pichardo-9b678b25" target="_blank">Linkedin</a></li>
+        <li><a href="http://github.com/mariapichardo" target="_blank">Github</a></li>
+        <li><a href="mailto:maria_pichardo@yahoo.com" target="_blank">Email</a></li>
+        <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+        <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+        <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <p>
+      <a href=".">Index</a> &brvbar; <a href="./archives.html">Archives</a>
+      </p>
+    </header>
+
+<article>
+  <div class="article_title">
+    <h1><a href="./capstone-project-factors-that-have-more-incidence-in-the-breast-cancer-diagnosis-after-a-regular-mammogram.html">CAPSTONE PROJECT : Factors that have more incidence in the breast cancer diagnosis after a regular mammogram.</a></h1>
+  </div>
+  <div class="article_text">
+    <p><img src="./images/breast-cancer.jpg" alt="Logo" title="breast-cancer awareness" /></p>
+<h3>Overview</h3>
+
+<p>Breast cancer is the most common cause of deaths from cancer among women in the United States. </p>
+
+<p>According to the American Cancer Society statistics 2016, it is estimated that almost 1.7 million new cases of cancer will be diagnosed in 2016. Prostate cancer is the most common cancer among males (21%), followed by lung (14%) and colorectal (8%) cancers. Among females, breast (29%), lung (13%), and colorectal (8%) cancers are the most common </p>
+
+<p><img src="./images/Capstone_3.png" alt="Logo" title="2016 Cancer Statistics"/></p>
+<h3>Problem Statement</h3>
+
+<P>The aim of this capstone project is to determine which factors have more incidence in the breast cancer diagnosis after a regular mammogram. At the same time, I will build a model to predict the probability of breast cancer based on those factors. I will be also creating an interface to predict the probability of breast cancer after entering the factors using the model.</P>
+
+<h3>Dataset Background</h3>
+
+<p>The dataset used in the present project includes 2,392,998 screening mammograms (called the "index mammogram") from women included in the Breast Cancer Surveillance Consortium (BCSC) and results were published by Barlow et al. in the September 2006 issue of the Journal of the National Cancer Institute. The women in this dataset did not have a previous diagnosis of breast cancer and did not have any breast imaging in the nine months preceding the index screening mammogram. However, all women had undergone previous breast mammography in the prior five years (though not in the last nine months). Cancer registry and pathology data were linked to the mammography data and incident breast cancer (invasive or ductal carcinoma in situ) within one year following the index screening mammogram was assessed. There is one observation per woman, as opposed to multiple observations. All population and all other characteristics remain the same. </p>
+
+<p>This dataser has 9 years of data from 2000 to 2009</p>
+
+<h3>Data Dictionary</h3>
+
+<table class="data-table data-left">
+  <tr>
+    <th scope="col"><strong>Variable Name</strong></th>
+    <th scope="col"><strong>Description </strong></th>
+    <th scope="col"><strong>Coding</strong></th>
+  </tr>
+  <tr>
+    <td>year</td>
+    <td>Calendar year of observation</td>
+    <td>Numerical, 2000-2009</td>
+  </tr>
+  <tr>
+    <td>age_group_5_years</td>
+    <td>Age (years) in 5 year groups</td>
+    <td><ul>
+  <li>1 = Age 18-29</li>
+  <li>2 = Age 30-34</li>
+  <li>3 = Age 35-39</li>
+  <li>4 = Age 40-44</li>
+  <li>5 = Age 45-49</li>
+  <li>6 = Age 50-54</li>
+  <li>7 = Age 55-59</li>
+  <li>8 = Age 60-64</li>
+  <li>9 = Age 65-69</li>
+  <li>10    = Age 70-74</li>
+  <li>11 = Age 75-79</li>
+  <li>12 = Age 80-84</li>
+  <li>13 = Age &gt;85</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>race_eth</td>
+    <td>Race/ethnicity</td>
+    <td><ul>
+  <li>1 =    Non-Hispanic white</li>
+  <li>2 = Non-Hispanic black</li>
+  <li>3 = Asian/Pacific Islander</li>
+  <li>4 =    Native      American</li>
+  <li>5 = Hispanic</li>
+  <li>6 = Other/mixed</li>
+  <li>9 = Unknown</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>first_degree_hx</td>
+    <td>History of breast cancer in a first degree relative</td>
+    <td><ul>
+  <li>0 = No</li>
+  <li>1 = Yes</li>
+  <li>9 = Unknown</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>age_menarche</td>
+    <td>Age (years) at menarche</td>
+    <td><ul>
+  <li>0 = Age &gt;14</li>
+  <li>1 = Age 12-13</li>
+  <li>2 = Age &lt;12</li>
+  <li>9 = Unknown</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>age_first_birth</td>
+    <td>Age (years) at first birth</td>
+    <td><ul>
+  <li>0 = Age &lt; 20</li>
+  <li>1 = Age 20-24</li>
+  <li>2 = Age 25-29</li>
+  <li>3 = Age    &gt;30</li>
+  <li>4 = Nulliparous</li>
+  <li>9 = Unknown</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>BIRADS_breast_density</td>
+    <td>BI-RADS breast density</td>
+    <td><ul>
+  <li>1 =    Almost entirely fat</li>
+  <li>2 =      Scattered    fibroglandular densities</li>
+  <li>3 = Heterogeneously      dense</li>
+  <li>4 = Extremely dense</li>
+  <li>9 = Unknown or different      measurement system</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>current_hrt</td>
+    <td>Use of hormone replacement therapy</td>
+    <td><ul>
+  <li>0 = No</li>
+  <li>1 = Yes</li>
+  <li>9 = Unknown</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>menopaus</td>
+    <td>Menopausal status</td>
+    <td><ul>
+  <li>1 = Pre- or peri-menopausal</li>
+  <li>2 = Post-menopausal</li>
+  <li>3 =    Surgical menopause</li>
+  <li>9 = Unknown</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>bmi_group</td>
+    <td>Body mass index</td>
+    <td><ul>
+  <li>1 = 10-24.99</li>
+  <li>2 = 25-29.99</li>
+  <li>3 = 30-34.99</li>
+  <li>4 = 35 or more</li>
+  <li>9 = Unknown</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>biophx</td>
+    <td>Previous breast biopsy or aspiration</td>
+    <td><ul>
+  <li>0 = No</li>
+  <li>1 = Yes</li>
+  <li>9 = Unknown</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>breast_cancer_history</td>
+    <td>Prior breast cancer diagnosis</td>
+    <td><ul>
+  <li>0 = No</li>
+  <li>1 = Yes</li>
+  <li>9 = Unknown</li>
+</ul></td>
+  </tr>
+  <tr>
+    <td>count</td>
+    <td>Frequency count of this combination of covariates</td>
+    <td>Numerical</td>
+  </tr>
+</table>
+
+<h3>Data Mining</h3>
+
+<p> I created Postgres Local Data Base to move the data set to a table and to be able to run sql queries on two million records for EDA purposes, and to create mini data frames for plotting and research. </p>
+
+<p> Table risk_data - see column description in the above data dictionary </p>
+
+<p><img src="./images/cancer_table.png" alt="Logo" title="Cancer table layout "/></p>
+<h3>EDA / Findings</h3>
+
+<p><img src="./images/bisrads_distribution.png" alt="Logo" title="bisrads_distribution "/></p>
+<h4>We can see in the above Pie Chart</h4>
+<ul>
+<li>That 22.2 % of our dataset has birads_breast_density UNKNOWN.</li>
+<li>40.7% is under birads_breast_density 1 and 2 which is considered "Benign"</li>
+<li>And 37% is under birads_breast_density 3 and 4 which will require extra screening</li>
+</ul>
+<div>
+    <a href="https://plot.ly/~mariapichardo/294/" target="_blank" title="Average birads_breast_density per year" style="display: block; text-align: center;"><img src="https://plot.ly/~mariapichardo/294.png" alt="Average birads_breast_density per year" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="mariapichardo:294"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+<div>
+    <a href="https://plot.ly/~mariapichardo/298/" target="_blank" title="Breast Cancer Data Population by Age" style="display: block; text-align: center;"><img src="https://plot.ly/~mariapichardo/298.png" alt="Breast Cancer Data Population by Age" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="mariapichardo:298"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+<h4>The chart above tells us that the most records are from Women on the age range 50-54. Followed by range 45-49.</h4>
+<h4>We can also infer that from 40-64 women tend to do their mamogram more actively.</h4>
+<div>
+    <a href="https://plot.ly/~mariapichardo/296/" target="_blank" title="Breast Cancer Data Population by Race" style="display: block; text-align: center;"><img src="https://plot.ly/~mariapichardo/296.png" alt="Breast Cancer Data Population by Race" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="mariapichardo:296"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+<h4>We can see in the above Horizontal Bar Chart above that more than the half of the dataset is composed of Non-Hispanic White women patiens. 44.08% other races being lead by "Hispanic" with 13.93%</h4>
+<div>
+    <a href="https://plot.ly/~mariapichardo/286/" target="_blank" title="Breast Cancer Data Population by Age menarche (Age at the first Period)" style="display: block; text-align: center;"><img src="https://plot.ly/~mariapichardo/286.png" alt="Breast Cancer Data Population by Age menarche (Age at the first Period)" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="mariapichardo:286"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+<h4>Age_menarche is how old the patient was when she got her first period. It seens to be one of the factor with more incidence</h4>
+<div>
+    <a href="https://plot.ly/~mariapichardo/288/" target="_blank" title="Patient Cancer History by birads_breast_density" style="display: block; text-align: center;"><img src="https://plot.ly/~mariapichardo/288.png" alt="Patient Cancer History by birads_breast_density" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="mariapichardo:288"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+<div>
+    <a href="https://plot.ly/~mariapichardo/290/" target="_blank" title="History of breast cancer in a first-degree relative (mother, sister or daughter) by birads_breast_density" style="display: block; text-align: center;"><img src="https://plot.ly/~mariapichardo/290.png" alt="History of breast cancer in a first-degree relative (mother, sister or daughter) by birads_breast_density" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="mariapichardo:290"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+<div>
+    <a href="https://plot.ly/~mariapichardo/292/" target="_blank" title="Relationship between patient breast cancer and first-degree relative cancer history" style="display: block; text-align: center;"><img src="https://plot.ly/~mariapichardo/292.png" alt="Relationship between patient breast cancer and first-degree relative cancer history" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="mariapichardo:292"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+<p><img src="./images/jointplotbisrad.png" alt="Logo" title="Bisrad joint plot"/></p>
+<h4>This jointplot shows that most of population in concentrated  on the BiRads between 2 and 3</h4>
+<div>
+    <a href="https://plot.ly/~mariapichardo/282/" target="_blank" title="Race Count by Brads" style="display: block; text-align: center;"><img src="https://plot.ly/~mariapichardo/282.png" alt="Race Count by Brads" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="mariapichardo:282"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+<h4>This last bubble chart is a visual representation of the relationship between race and the Brads classification</h4>
+<h3>Risks and Assumptions</h3>
+
+<p>The risk of modeling is always to be able to obtain accurate relative results from predicting based on factors, such as demographics, reproductive history,  medications, genetic factors (e.g., family history and susceptibility genes), and clinical and biologic markers (e.g., bmi - Body mass index). How these factors act jointly on risk also is important. These relative risk and attributable risk estimates, as well as missing or biased data has to be taken into account when reviewing the results of the present study</p>
+
+<p> The Statistical techniques used to calculate risk include empirical analysis thru EDA and logistic regression as well as other classifiers that were compared based on their metric scores</p>
+
+<h3>Model</h3>
+
+<p>I compared the classifiers below. It may seem like a lot, but the purpose was to select the best classifier based on mse and std.</p>
+
+<p><img src="./images/model_comparison.png" alt="Logo" title="work in progress "/></p>
+<p>I trained and tested on a hold-out sample (20% of the dataset). </p>
+
+<p>Each model used the following features from the data: </p>
+
+<p>Features:</p>
+
+<ul>
+
+<li>age_menarche - Age (years) at menarche</li>
+<li>age_group_5_years - Age (years) in 5 year groups</li>
+<li>race_eth - Race/ethnicity</li>
+<li>first_degree_hx - History of breast cancer in a first degree relative</li>
+<li>breast_cancer_history - Prior breast cancer diagnosis</li>
+<li>age_first_birth - Age (years) at first birth</li>
+<li>current_hrt - Use of hormone replacement therapy</li>
+<li>menopaus - Menopausal status</li>
+<li>bmi_group - Body mass index</li>
+
+</ul>
+
+<p>Target:</p>
+
+<p><p>Results based on BI-RADS breast density: </p></p>
+<ul>
+<li>0 - Negative  - Low risk </li>
+<li>1 - Positive  - High Risk</li>
+</ul>
+
+<p><img src="./images/capstone_heatmap.png" alt="Logo" title="heatmap "/></p>
+<p>Evaluation data correlation</p>
+
+<p><img src="./images/captone_lr_model_roc.png" alt="Logo" title="LR ROC CURVE "/></p>
+<p>Model ROC curve and score</p>
+
+<p><img src="./images/precision_table_lr.png" alt="Logo" title="Precision tables "/></p>
+<p> Confusion and precision tables </p>
+
+<p> Model Comparison</p>
+
+<p><img src="./images/model_comparison_I.png" alt="Logo" title="model comparison "/></p>
+<p><img src="./images/model_comparison_II.png" alt="Logo" title="model comparison "/></p>
+<p> Evaluating Coefficients </p>
+
+<p><img src="./images/Coeficients_lr.png" alt="Logo" title="Coefficients "/></p>
+<h3>Results and Conclusion</h3>
+
+<p>I have developed a prognostication model for early breast cancer based The Breast Cancer Surveillance Consortium  (BCSC) index mammogram dataset. The model predicts breast cancer probability after a mammogram is done. The probability is based on BI-RADS breast density which is part of the dataset. The performance and score have been compare among several classifiers. The best performer was GridsearchCV  Bagging Logistic Regression. I picked the Logistic regression because of its simplicity</p>
+
+<p>Being able to predict breast cancer outcomes more accurately would help physicians make informed decisions regarding the potential necessity of research and treatment in women patients </p>
+
+<h3>Next Steps</h3>
+
+<p>The model needs to be better calibrated  with more data, and also validated with and evaluated by professionals in the area </p>
+
+<p>It would be beneficial to research the BCSC dataset bank and more features to improve score  </p>
+
+<h3>Additional Links</h3>
+
+<p><a href="http://www.bcsc-research.org/data/index.html"> 
+<font color="1dcaff"> BCSC DATA</font> </a></p>
+<p>http://www.bcsc-research.org/data/index.html</p>
+<p><a href="https://docs.google.com/presentation/d/19jJ3cA-yrd4_Mm-yO0AL9Uz74FbkJZmwq9i4TR2UrxY/edit#slide=id.p"> 
+<font color="1dcaff"> Link to the Google Slide Presentation Factors that have more incidence in the breast cancer diagnosis after a regular mammogram</font> </a></p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: Sun 11 December 2016</p>
+    <p>Category: <a href="./category/projects.html">Projects</a>
+    </p>
+  </div>
+
+
+<section>
+    <p id="post-share-links">
+        Share on:
+        <a href="https://sharetodiaspora.github.io/?title=CAPSTONE%20PROJECT%20%3A%20Factors%20that%20have%20more%20incidence%20in%20the%20breast%20cancer%20diagnosis%20after%20a%20regular%20mammogram.&url=https%3A//mariapichardo.github.io/capstone-project-factors-that-have-more-incidence-in-the-breast-cancer-diagnosis-after-a-regular-mammogram.html" target="_blank" title="Share on Diaspora"><font color="1dcaff">Diaspora*</a>
+        ❄
+        <a href="http://twitter.com/home?status=CAPSTONE%20PROJECT%20%3A%20Factors%20that%20have%20more%20incidence%20in%20the%20breast%20cancer%20diagnosis%20after%20a%20regular%20mammogram.%20https%3A//mariapichardo.github.io/capstone-project-factors-that-have-more-incidence-in-the-breast-cancer-diagnosis-after-a-regular-mammogram.html" target="_blank" title="Share on Twitter"><font color="1dcaff">Twitter</a>
+        ❄
+        <a href="http://www.facebook.com/sharer/sharer.php?u=https%3A//mariapichardo.github.io/capstone-project-factors-that-have-more-incidence-in-the-breast-cancer-diagnosis-after-a-regular-mammogram.html" target="_blank" title="Share on Facebook"><font color="1dcaff">Facebook</a>
+        ❄
+        <a href="https://plus.google.com/share?url=https%3A//mariapichardo.github.io/capstone-project-factors-that-have-more-incidence-in-the-breast-cancer-diagnosis-after-a-regular-mammogram.html" target="_blank" title="Share on Google Plus"><font color="1dcaff">Google+</a>
+        ❄
+        <a href="mailto:?subject=CAPSTONE%20PROJECT%20%3A%20Factors%20that%20have%20more%20incidence%20in%20the%20breast%20cancer%20diagnosis%20after%20a%20regular%20mammogram.&amp;body=https%3A//mariapichardo.github.io/capstone-project-factors-that-have-more-incidence-in-the-breast-cancer-diagnosis-after-a-regular-mammogram.html" target="_blank" title="Share via Email"><font color="1dcaff">Email</a>
+    </p>
+</section>
+
+</article>
+
+
+    <div id="ending_message">
+      <p>&copy; 2016 Maria Pichardo. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+    </div>
+  </main>
+</body>
+</html>
